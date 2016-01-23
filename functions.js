@@ -24,7 +24,7 @@ module.exports = {
 		};
 
 		request.post(optionsAuth, function (error, body) {
-		    console.log(body);
+		    console.log(body.body.accessToken);
 		});
 	},
 
