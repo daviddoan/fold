@@ -68,7 +68,6 @@ module.exports = {
 
 		client.getAccounts({}, function (error, accounts, res) {
 			if (res.status == 401) {
-				res.send('getfucked')
 				oauthRefresh(refreshToken);
 			}
 
