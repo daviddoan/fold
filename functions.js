@@ -23,8 +23,8 @@ module.exports = {
 			},
 		};
 
-		request.post(optionsAuth, function (error, req) {
-		    accessToken = JSON.parse(req.body).access_token;
+		var accessToken = request.post(optionsAuth, function (error, req) {
+		    var accessToken = JSON.parse(req.body).access_token;
 		    console.log(JSON.parse(req.body)); 
 		    console.log(accessToken);
 		    return accessToken;
