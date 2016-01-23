@@ -12,15 +12,6 @@ router.get('/', function(req, res, next) {
 
 router.get('/oauthToken', function(req, res) {
   accessToken = functions.oauthToken(req.query.code);
-
-  request.post(optionsAuth, function (err, req) {
-
-	 var accessToken = JSON.parse(req.body).access_token;
-	 console.log(JSON.parse(req.body)); 
-	 console.log(accessToken);
-	    
-  });
-  
 });
 
 router.get('/userInfo', function(req, res) {
