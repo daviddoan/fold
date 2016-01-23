@@ -24,9 +24,8 @@ module.exports = {
 		};
 
 		request.post(optionsAuth, function (error, res, req) {
-		    accessToken = JSON.parse(req.body).access_token;
-		    console.log(JSON.parse(req.body).access_token + 'what');
-		    res.redirect('301', '/?accessToken=' + accessToken);
+		    // accessToken = JSON.parse(req.body).access_token;
+		    console.log(JSON.parse(req.body));
 		});
 	},
 
