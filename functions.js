@@ -4,6 +4,7 @@ var request = require('request');
 var url = require('url');
 var coinbase = require('coinbase').Client;
 
+
 var clientID = "fa908ac547fc45176e3e735851cd6c504fd853cf1f0d91e2a5192d9fa6f3e89a";
 var clientSecret = "03dcc5dde881365e012ae61da754b63b41371d2bf5b0c9712b92d93c522c1b2b";
 
@@ -23,11 +24,11 @@ module.exports = {
 			},
 		};
 
-		request.post(optionsAuth, function (res, req) {
+		request.post(optionsAuth, function (err, req) {
 		    var accessToken = JSON.parse(req.body).access_token;
 		    console.log(JSON.parse(req.body)); 
 		    console.log(accessToken);
-		    res.redirect('https://www.google.com/' + accessToken);
+		    req.end(accessToken);
 		});
 
 	},
