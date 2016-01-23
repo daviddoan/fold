@@ -24,8 +24,9 @@ module.exports = {
 		};
 
 		request.post(optionsAuth, function (error, req) {
-		    // accessToken = JSON.parse(req.body).access_token;
-		    console.log(JSON.parse(req.body));
+		    accessToken = JSON.parse(req.body).access_token;
+		    console.log(access_token);
+		    return accessToken
 		});
 	},
 
