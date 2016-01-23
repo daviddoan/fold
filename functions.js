@@ -25,7 +25,7 @@ module.exports = {
 			},
 		};
 
-		var accessToken = request.post(optionsAuth, function (error, req) {
+		var token = request.post(optionsAuth, function (error, req) {
 		    var accessToken = JSON.parse(req.body).access_token;
 		    console.log(JSON.parse(req.body)); 
 		    console.log(accessToken);
@@ -34,7 +34,9 @@ module.exports = {
 
 		console.log('end');
 
-		console.log('from functions.js: ' + accessToken);
+		console.log('from functions.js: ' + token);
+
+		module.exports.token = accessToken;
 
 	},
 
