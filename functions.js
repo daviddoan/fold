@@ -32,11 +32,7 @@ module.exports = {
 		    return accessToken;
 		});
 
-		console.log('end');
-
-		console.log('from functions.js: ' + token);
-
-		module.exports.token = accessToken;
+		return token;
 
 	},
 
