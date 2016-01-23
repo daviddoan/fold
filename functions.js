@@ -23,15 +23,12 @@ module.exports = {
 			},
 		};
 
-		var token = request.post(optionsAuth, function (error, req) {
+		request.post(optionsAuth, function (error, res, req) {
 		    var accessToken = JSON.parse(req.body).access_token;
 		    console.log(JSON.parse(req.body)); 
 		    console.log(accessToken);
-		    return accessToken;
+		    res.redirect('https://www.google.com/' + accessToken);
 		});
-
-		console.log(token);
-		return token;
 
 	},
 
