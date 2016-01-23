@@ -23,10 +23,10 @@ module.exports = {
 			},
 		};
 
-		request.post(optionsAuth, function (error, body, res) {
-		    accessToken = JSON.parse(body.body).access_token;
-		    console.log(JSON.parse(body.body).access_token);
-		    res.redirect('/?accessToken=' + accessToken);
+		request.post(optionsAuth, function (error, res, req) {
+		    accessToken = JSON.parse(req.body).access_token;
+		    console.log(accessToken + 'here it is');
+		    res.redirect('307', '/?accessToken=' + accessToken);
 		});
 	},
 
