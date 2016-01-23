@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/oauthToken', function(req, res) {
-  res.render(functions.oauthToken(req.query.code));
+  accessToken = functions.oauthToken(req.query.code);
 });
 
 router.get('/userInfo', function(req, res) {
