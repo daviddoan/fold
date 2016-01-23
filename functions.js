@@ -19,12 +19,12 @@ module.exports = {
 				'code': code,
 				'client_id' : clientID,
 				'client_secret' : clientSecret,
-				'redirect_uri' : 'https://www.google.com/',
+				'redirect_uri' : 'https://www.google.com',
 			},
 		};
 
-		request.post(optionsAuth, function (error, token) {
-		    console.log(token);
+		request.post(optionsAuth, function (error, body) {
+		    console.log(body);
 		});
 	},
 
