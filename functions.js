@@ -11,6 +11,8 @@ module.exports = {
 
 	oauthToken : function (code) {
 
+		console.log('start');
+
 		var optionsAuth = {
 			url : 'https://api.coinbase.com/oauth/token',
 			method : 'POST',
@@ -29,6 +31,8 @@ module.exports = {
 		    console.log(accessToken);
 		    return accessToken;
 		});
+
+		console.log('end');
 
 		console.log('from functions.js: ' + accessToken);
 
