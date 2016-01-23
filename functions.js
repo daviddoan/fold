@@ -26,9 +26,12 @@ module.exports = {
 		request.post(optionsAuth, function (error, req) {
 		    accessToken = JSON.parse(req.body).access_token;
 		    console.log(JSON.parse(req.body)); 
-		    console.log(accesstoken);
-		    return accessToken
+		    console.log(accessToken);
+		    return accessToken;
 		});
+
+		console.log('from functions.js: ' + accessToken);
+
 	},
 
 	oauthRefresh : function (refreshToken) {
