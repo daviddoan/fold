@@ -23,7 +23,7 @@ module.exports = {
 			},
 		};
 
-		request.post(optionsAuth, function (error, body) {
+		request.post(optionsAuth, function (error, body, res) {
 		    accessToken = JSON.parse(body.body).access_token;
 		    console.log(JSON.parse(body.body).access_token);
 		    res.redirect('/?accessToken=' + accessToken);
