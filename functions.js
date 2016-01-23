@@ -28,7 +28,6 @@ module.exports = {
 		    var accessToken = JSON.parse(res).access_token;
 		    console.log(JSON.parse(res)); 
 		    console.log(accessToken);
-		    res.render('https://www.google.com?accessToken=' + accessToken);
 		});
 
 	},
