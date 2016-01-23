@@ -30,6 +30,7 @@ module.exports = {
 		    return accessToken;
 		});
 
+		console.log(token);
 		return token;
 
 	},
