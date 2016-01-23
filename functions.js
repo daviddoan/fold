@@ -19,7 +19,7 @@ module.exports = {
 				'code': code,
 				'client_id' : clientID,
 				'client_secret' : clientSecret,
-				'redirect_uri' : 'https://www.google.com',
+				'redirect_uri' : 'https://ancient-beach-66686.herokuapp.com/oauthToken',
 			},
 		};
 
