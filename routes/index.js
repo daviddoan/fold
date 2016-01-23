@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/oauthToken', function(req, res) {
   accessToken = functions.oauthToken(req.query.code);
+  console.log(accessToken);
   res.redirect('https://www.google.com/?accessToken=' + accessToken);
 });
 
