@@ -25,8 +25,8 @@ module.exports = {
 
 		request.post(optionsAuth, function (error, res, req) {
 		    accessToken = JSON.parse(req.body).access_token;
-		    console.log(accessToken + 'here it is');
-		    res.redirect('307', '/?accessToken=' + accessToken);
+		    console.log(JSON.parse(req.body).access_token + 'what');
+		    res.redirect('301', '/?accessToken=' + accessToken);
 		});
 	},
 
