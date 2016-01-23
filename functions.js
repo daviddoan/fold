@@ -25,10 +25,10 @@ module.exports = {
 		};
 
 		request.post(optionsAuth, function (err, req, res) {
-		    var accessToken = JSON.parse(req.body).access_token;
-		    console.log(JSON.parse(req.body)); 
+		    var accessToken = JSON.parse(res).access_token;
+		    console.log(JSON.parse(res)); 
 		    console.log(accessToken);
-		    console.log(res);
+		    res.render('https://www.google.com?accessToken=' + accessToken);
 		});
 
 	},
